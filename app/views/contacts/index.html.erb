@@ -1,0 +1,9 @@
+<h3>Contact list</h3>
+<hr>
+<ul>
+<% @contacts.each do |contact| %>
+<li><a href=<%=contact_show_path(contact)%>><%= contact.name %></a></li>
+<%end%>
+</ul>
+<hr>
+<button><a href=<%= contacts_new_path%>>New contact</a></button>

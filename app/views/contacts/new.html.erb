@@ -1,0 +1,20 @@
+<h3>Add a New Contact</h3>
+
+<%= form_for @contact do |c| %>
+	<div>
+		<%= c.text_field :name, placeholder:"name" %>
+	</div><br>
+	<div>
+		<%= c.text_field :address, placeholder:"address" %>
+	</div><br>
+	<div>
+		<%= c.number_field :phone_number, placeholder:"phone number"  %>
+	</div><br>
+	<div>
+		<%= c.email_field :email, placeholder:"e-mail address" %>
+	</div><br>
+	<div>
+  		<%= c.submit "Add a new contact" %>
+  		<button><a href=<%=contacts_path%>>Back to contact list</a></button>
+  	</div>
+<%end%>
